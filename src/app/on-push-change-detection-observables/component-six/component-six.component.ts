@@ -13,7 +13,6 @@ import {toggleClass} from '../../toggle-class.service';
       <li><cmp-thirteen></cmp-thirteen></li>
     </ul>
   `,
-  directives: [ComponentTwelve, ComponentThirteen],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ComponentSix {
