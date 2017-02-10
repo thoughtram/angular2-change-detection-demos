@@ -1,22 +1,26 @@
-import {
-  beforeEachProviders,
-  describe,
-  expect,
-  it,
-  inject
-} from '@angular/core/testing';
-import { CdDemosAppComponent } from '../app/cd-demos.component';
-
-beforeEachProviders(() => [CdDemosAppComponent]);
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {CdDemosAppComponent} from './cd-demos.component';
 
 describe('App: CdDemos', () => {
-  it('should create the app',
-      inject([CdDemosAppComponent], (app: CdDemosAppComponent) => {
-    expect(app).toBeTruthy();
-  }));
 
-  it('should have as title \'cd-demos works!\'',
-      inject([CdDemosAppComponent], (app: CdDemosAppComponent) => {
-    expect(app.title).toEqual('cd-demos works!');
-  }));
+    let fixture: ComponentFixture<CdDemosAppComponent>;
+    let component: CdDemosAppComponent;
+
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [CdDemosAppComponent],
+            schemas: [CUSTOM_ELEMENTS_SCHEMA]
+        }).compileComponents();
+    }));
+
+    beforeEach(() => {
+        fixture = TestBed.createComponent(CdDemosAppComponent);
+        component = fixture.componentInstance;
+    });
+
+    it('should create the app', () => {
+        expect(component).toBeTruthy();
+    });
+
 });

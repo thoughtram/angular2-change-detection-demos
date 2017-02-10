@@ -1,29 +1,39 @@
-import {Component, NgZone, ElementRef, ChangeDetectionStrategy, ViewChildren, ChangeDetectorRef} from '@angular/core';
-import {ComponentFour} from '../component-four';
-import {ComponentFive} from '../component-five';
+// tslint:disable:component-selector
+// tslint:disable:component-class-suffix
+
+import {
+    AfterViewChecked,
+    ChangeDetectionStrategy,
+    ChangeDetectorRef,
+    Component,
+    ElementRef,
+    NgZone
+} from '@angular/core';
 import {toggleClass} from '../../toggle-class.service';
 
 @Component({
-  selector: 'cmp-two',
-  template: `
-    <a class="on-push">Cmp2</a>
+    selector: 'cmp-two',
+    template: `
+        <a class="on-push">Cmp2</a>
 
-    <ul>
-      <li><cmp-four></cmp-four></li>
-      <li><cmp-five></cmp-five></li>
-    </ul>
-  `,
-  directives: [ComponentFour, ComponentFive],
-  changeDetection: ChangeDetectionStrategy.OnPush
+        <ul>
+            <li>
+                <cmp-four></cmp-four>
+            </li>
+            <li>
+                <cmp-five></cmp-five>
+            </li>
+        </ul>
+    `,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ComponentTwo {
+export class ComponentTwo implements AfterViewChecked {
 
-  counter:number = 0;
+    constructor(private zone: NgZone, private el: ElementRef, private cd: ChangeDetectorRef) {
+    }
 
-  constructor(private zone: NgZone, private el: ElementRef, private cd:ChangeDetectorRef) {}
+    ngAfterViewChecked() {
+        toggleClass(this.el, this.zone);
+    }
 
-  ngAfterViewChecked() {
-    toggleClass(this.el, this.zone);
-  }
 }
-

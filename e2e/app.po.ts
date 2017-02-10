@@ -1,9 +1,11 @@
-export class CdDemosPage {
-  navigateTo() {
-    return browser.get('/');
-  }
+import {browser, by, element} from 'protractor';
 
-  getParagraphText() {
-    return element(by.css('cd-demos-app h1')).getText();
-  }
+export class CdDemosPage {
+    navigateTo() {
+        return browser.get('/');
+    }
+
+    getParagraphText() {
+        return element(by.css('cd-demos-app h1')).getText();
+    }
 }

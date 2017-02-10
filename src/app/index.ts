@@ -1,2 +1,1 @@
-export * from './environment';
-export * from './cd-demos.component';
+export * from './cd-demos.module';
