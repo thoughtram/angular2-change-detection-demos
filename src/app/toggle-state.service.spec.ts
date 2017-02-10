@@ -1,18 +1,19 @@
-/* tslint:disable:no-unused-variable */
-
-import {
-  beforeEach, beforeEachProviders,
-  describe, xdescribe,
-  expect, it, xit,
-  async, inject
-} from '@angular/core/testing';
-import { ToggleStateService } from './toggle-state.service';
+import {ToggleStateService} from './toggle-state.service';
+import {inject, TestBed} from '@angular/core/testing';
 
 describe('ToggleState Service', () => {
-  beforeEachProviders(() => [ToggleStateService]);
 
-  it('should ...',
-      inject([ToggleStateService], (service: ToggleStateService) => {
-    expect(service).toBeTruthy();
-  }));
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            providers: [
+                ToggleStateService
+            ]
+        });
+    });
+
+    it('should inject ToggleStateService', inject([ToggleStateService], (service) => {
+        expect(service).toBeTruthy();
+        expect(service.runInterval).toBeFalsy();
+    }));
+
 });

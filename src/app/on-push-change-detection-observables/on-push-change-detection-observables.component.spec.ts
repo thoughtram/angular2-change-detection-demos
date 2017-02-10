@@ -1,20 +1,26 @@
-/* tslint:disable:no-unused-variable */
-
-import { By }           from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
-import {
-  beforeEach, beforeEachProviders,
-  describe, xdescribe,
-  expect, it, xit,
-  async, inject
-} from '@angular/core/testing';
-
-import { OnPushChangeDetectionObservablesComponent } from './on-push-change-detection-observables.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {OnPushChangeDetectionObservablesComponent} from './on-push-change-detection-observables.component';
 
 describe('Component: OnPushChangeDetectionObservables', () => {
-  it('should create an instance', () => {
-    let component = new OnPushChangeDetectionObservablesComponent();
-    expect(component).toBeTruthy();
-  });
+
+    let fixture: ComponentFixture<OnPushChangeDetectionObservablesComponent>;
+    let component: OnPushChangeDetectionObservablesComponent;
+
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [OnPushChangeDetectionObservablesComponent],
+            schemas: [CUSTOM_ELEMENTS_SCHEMA]
+        }).compileComponents();
+    }));
+
+    beforeEach(() => {
+        fixture = TestBed.createComponent(OnPushChangeDetectionObservablesComponent);
+        component = fixture.componentInstance;
+    });
+
+    it('should create an instance', () => {
+        expect(component).toBeTruthy();
+    });
+
 });

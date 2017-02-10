@@ -1,20 +1,26 @@
-/* tslint:disable:no-unused-variable */
-
-import { By }           from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
-import {
-  beforeEach, beforeEachProviders,
-  describe, xdescribe,
-  expect, it, xit,
-  async, inject
-} from '@angular/core/testing';
-
-import { ComponentThreeComponent } from './component-three.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {ComponentThree} from './component-three.component';
 
 describe('Component: ComponentThree', () => {
-  it('should create an instance', () => {
-    let component = new ComponentThreeComponent();
-    expect(component).toBeTruthy();
-  });
+
+    let fixture: ComponentFixture<ComponentThree>;
+    let component: ComponentThree;
+
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [ComponentThree],
+            schemas: [CUSTOM_ELEMENTS_SCHEMA]
+        }).compileComponents();
+    }));
+
+    beforeEach(() => {
+        fixture = TestBed.createComponent(ComponentThree);
+        component = fixture.componentInstance;
+    });
+
+    it('should create an instance', () => {
+        expect(component).toBeTruthy();
+    });
+
 });
