@@ -1,22 +1,28 @@
-import {Component, NgZone, ElementRef, ChangeDetectionStrategy} from '@angular/core';
-import {ComponentSixteen} from '../component-sixteen';
+// tslint:disable:component-selector
+// tslint:disable:component-class-suffix
+
+import {AfterViewChecked, Component, ElementRef, NgZone} from '@angular/core';
 import {toggleClass} from '../../toggle-class.service';
 
 @Component({
-  selector: 'cmp-eight',
-  template: `
-    <a>Cmp8</a>
+    selector: 'cmp-eight',
+    template: `
+        <a>Cmp8</a>
 
-    <ul>
-      <li><cmp-sixteen></cmp-sixteen></li>
-    </ul>
-  `,
+        <ul>
+            <li>
+                <cmp-sixteen></cmp-sixteen>
+            </li>
+        </ul>
+    `
 })
-export class ComponentEight {
+export class ComponentEight implements AfterViewChecked {
 
-  constructor(private zone: NgZone, private el: ElementRef) {}
+    constructor(private zone: NgZone, private el: ElementRef) {
+    }
 
-  ngAfterViewChecked() {
-    toggleClass(this.el, this.zone);
-  }
+    ngAfterViewChecked() {
+        toggleClass(this.el, this.zone);
+    }
+
 }

@@ -18,7 +18,6 @@ import {ComponentFiveteen} from './component-fiveteen/component-fiveteen.compone
 import {ComponentSixteen} from './component-sixteen/component-sixteen.component';
 import {ComponentSeventeen} from './component-seventeen/component-seventeen.component';
 
-
 @NgModule({
     declarations: [
         OnPushChangeDetectionObservablesComponent,
