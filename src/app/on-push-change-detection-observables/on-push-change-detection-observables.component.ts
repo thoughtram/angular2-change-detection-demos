@@ -2,7 +2,7 @@
 // tslint:disable:component-class-suffix
 
 import {Component} from '@angular/core';
-import {Subject} from 'rxjs/Rx';
+import {Subject} from 'rxjs';
 
 @Component({
     selector: 'on-push-cd-observables',

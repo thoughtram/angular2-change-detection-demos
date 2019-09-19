@@ -1,1 +1,1 @@
-export * from './cd-demos.module';
+export * from './cd-demos-app.module';

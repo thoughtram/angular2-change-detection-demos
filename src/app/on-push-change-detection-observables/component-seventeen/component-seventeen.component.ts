@@ -11,13 +11,13 @@ import {
     NgZone,
     OnInit
 } from '@angular/core';
-import {Subject} from 'rxjs/Rx';
+import {Subject} from 'rxjs';
 import {toggleClass} from '../../toggle-class.service';
 
 @Component({
     selector: 'cmp-seventeen',
     template: `
-        <a class="on-push subscriber">Cmp17</a>
+        <a class="on-push subscriber with-input">Cmp17</a>
     `,
     changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -3,7 +3,7 @@
 // tslint:disable:use-host-property-decorator
 
 import {AfterViewChecked, ChangeDetectionStrategy, Component, ElementRef, Input, NgZone} from '@angular/core';
-import {Subject} from 'rxjs/Rx';
+import {Subject} from 'rxjs';
 import {toggleClass} from '../../toggle-class.service';
 
 @Component({
@@ -12,7 +12,7 @@ import {toggleClass} from '../../toggle-class.service';
         '(click)': 'emitAndTriggerChangeDetection()'
     },
     template: `
-        <a class="on-push click-me">Cmp7</a>
+        <a class="on-push click-me with-input">Cmp7</a>
 
         <ul>
             <li>
