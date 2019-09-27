@@ -7,7 +7,7 @@ import {toggleClass} from '../../toggle-class.service';
 @Component({
     selector: 'cmp-four',
     template: `
-        <a>Cmp4</a>
+        <a class="on-push">Cmp4</a>
 
         <ul>
             <li>

@@ -2,13 +2,13 @@
 // tslint:disable:component-class-suffix
 
 import {AfterViewChecked, ChangeDetectionStrategy, Component, ElementRef, Input, NgZone} from '@angular/core';
-import {Subject} from 'rxjs/Rx';
+import {Subject} from 'rxjs';
 import {toggleClass} from '../../toggle-class.service';
 
 @Component({
     selector: 'cmp-three',
     template: `
-        <a class="on-push">Cmp3</a>
+        <a class="on-push with-input">Cmp3</a>
 
         <ul>
             <li>

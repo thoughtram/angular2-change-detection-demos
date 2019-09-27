@@ -1,47 +1,39 @@
 {
-    "name": "cd-demos",
-    "version": "0.0.0",
-    "license": "MIT",
-    "angular-cli": {},
-    "scripts": {
-        "lint": "tslint --project src/tsconfig.json",
-        "ng": "ng",
-        "start": "ng serve",
-        "test": "ng test",
-        "pree2e": "webdriver-manager update --standalone false --gecko false",
-        "e2e": "protractor"
-    },
-    "private": true,
-    "dependencies": {
-        "@angular/common": "2.4.7",
-        "@angular/compiler": "2.4.7",
-        "@angular/core": "2.4.7",
-        "@angular/forms": "2.4.7",
-        "@angular/http": "2.4.7",
-        "@angular/platform-browser": "2.4.7",
-        "@angular/platform-browser-dynamic": "2.4.7",
-        "@angular/router": "3.4.7",
-        "core-js": "2.4.1",
-        "rxjs": "5.1.0",
-        "ts-helpers": "1.1.2",
-        "zone.js": "0.7.6"
-    },
-    "devDependencies": {
-        "@angular/cli": "1.0.0-beta.31",
-        "@angular/compiler-cli": "2.4.7",
-        "@types/jasmine": "2.5.41",
-        "@types/node": "6.0.63",
-        "codelyzer": "2.0.0",
-        "jasmine-core": "2.5.2",
-        "jasmine-spec-reporter": "3.2.0",
-        "karma": "1.4.1",
-        "karma-chrome-launcher": "2.0.0",
-        "karma-cli": "1.0.1",
-        "karma-jasmine": "1.1.0",
-        "karma-remap-istanbul": "0.6.0",
-        "protractor": "5.1.1",
-        "ts-node": "2.1.0",
-        "tslint": "4.4.2",
-        "typescript": "2.1.6"
-    }
+  "name": "angular8tutorial",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~8.0.0",
+    "@angular/common": "~8.0.0",
+    "@angular/compiler": "~8.0.0",
+    "@angular/core": "~8.0.0",
+    "@angular/forms": "~8.0.0",
+    "@angular/platform-browser": "~8.0.0",
+    "@angular/platform-browser-dynamic": "~8.0.0",
+    "@angular/router": "~8.0.0",
+    "bootstrap": "^4.3.1",
+    "rxjs": "~6.4.0",
+    "rxjs-compat": "^6.5.2",
+    "tslib": "^1.9.0",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.800.0",
+    "@angular/cli": "~8.0.1",
+    "@angular/compiler-cli": "~8.0.0",
+    "@angular/language-service": "~8.0.0",
+    "@types/node": "~8.9.4",
+    "@types/jasmine": "~3.3.8",
+    "@types/jasminewd2": "~2.0.3",
+    "codelyzer": "^5.0.0",
+    "protractor": "~5.4.0",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.15.0",
+    "typescript": "~3.4.3"
+  }
 }
