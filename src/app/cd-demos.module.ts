@@ -53,8 +53,7 @@ const appRoutes: Routes = [
             provide: LocationStrategy,
             useClass: HashLocationStrategy
         }
-    ],
-    exports: [RouterModule],
+    ]
 })
 export class CdDemosAppModule {
 }

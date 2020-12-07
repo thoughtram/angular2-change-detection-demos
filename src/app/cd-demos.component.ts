@@ -1,7 +1,7 @@
 // tslint:disable:component-selector
 
 import {AfterViewChecked, Component, ViewChild, ViewEncapsulation} from '@angular/core';
-import {Subject} from 'rxjs/Rx';
+import {Subject} from 'rxjs';
 
 import {DefaultChangeDetectionComponent} from './default-change-detection';
 import {OnPushChangeDetectionComponent} from './on-push-change-detection';
