@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {Subject} from 'rxjs/Rx';
+import {Subject} from 'rxjs';
 import {ToggleStateService} from '../toggle-state.service';
 
 @Component({

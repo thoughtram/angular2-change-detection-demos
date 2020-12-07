@@ -3,7 +3,7 @@
 // tslint:disable:use-host-property-decorator
 
 import {AfterViewChecked, ChangeDetectionStrategy, Component, ElementRef, Input, NgZone} from '@angular/core';
-import {Subject} from 'rxjs/Rx';
+import {Subject} from 'rxjs';
 import {toggleClass} from '../../toggle-class.service';
 
 @Component({
